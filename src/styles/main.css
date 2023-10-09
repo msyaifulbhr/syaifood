@@ -1,0 +1,245 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F9FBFC;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  padding: 10px 32px;
+  background-color: #E5E4FF;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 2px 2px 5px rgb(4, 2, 26);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header__inner > img {
+  width: 80px;
+  padding: 0;
+  margin: 0;
+}
+
+.header__inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.header__inner img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+}
+
+.nav__item a {
+  font-weight: 400;
+  color: #101041;
+  padding: 15px;
+  
+  border-radius: 999px;
+}
+
+.nav__item > a:hover {
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: #3A38FF;
+  padding: 15px;
+}
+
+
+
+.nav__item a {
+  text-decoration: none;
+}
+
+.header__menu {
+  display: none;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 380px;
+  width: 100%;
+  padding-left: 32px;
+  padding-right: 32px;
+  text-align: left;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  line-height: 1;
+  background-image: url('../public/images/heros/hero-image_2.jpg');
+  background-position: center;
+  background-color: green;
+}
+
+.hero .hero__inner button {
+  margin-top: 43px;
+  text-transform: uppercase;
+  padding: .8rem 2.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  box-shadow: 2px 2px 5px rgb(4, 2, 26);
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #3A38FF;
+  cursor: pointer;
+  transition: all .15s ease-in;
+}
+
+.hero .hero__inner button:hover {
+  color: #fff;
+  background-color: #101041;
+}
+
+.explore__label {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.restaurants {
+  margin: 32px;
+  text-align: left;
+  display: grid;
+  grid-row-gap: 16px;
+}
+
+.restaurant-item {
+  float: left;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card__img img {
+  width: 100%;
+}
+
+.card__img {
+  position: relative;
+  width: 100%;
+}
+
+.card__img .city {
+  background-color: #3A38FF;
+  border-radius: 0 0 0 999px;
+  color: #fff;
+  padding: 0.5rem 1rem 0.5rem 2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.card__body {
+  padding: 20px;
+  height: 100%;
+  background-color: #fff;
+  color: #101041;
+}
+
+.description {
+  margin-top: 16px;
+  font-weight: 300;
+  font-size: 14px;
+  color: #949293;
+}
+
+.button__view {
+  display: flex;
+  justify-content: center;
+}
+
+.button__view button {
+  margin-top: 43px;
+  text-transform: uppercase;
+  padding: .8rem 2.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 2px 2px 5px rgb(4, 2, 26);
+  background-color: #3A38FF;
+  cursor: pointer;
+  transition: all .15s ease-in;
+}
+
+.button__view button:hover {
+  border: 3px solid #3A38FF;
+  color: #3A38FF;
+  background-color: transparent;
+}
+
+footer {
+  background-color: #E5E4FF;
+  margin-top: 100px;
+  padding: 2em;
+  width: 100%;
+  text-align: center;
+}
+
+footer ul {
+  margin: 0 auto;
+  list-style: none;
+}
+
+footer li {
+  margin: 0 1em;
+  font-size: 14px;
+}
+
+footer a {
+  color: #101041;
+}
+
+@media screen and (min-width: 426px) {
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 16px;
+  } 
+}
+
+@media screen and (min-width: 769px) {
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 16px;
+  } 
+}
+
+@media (max-width: 767px) {
+  .header__inner {
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    padding: 0;
+  }
+  
+  .nav {
+    display: none;
+  }
+  
+  .header__menu {
+    display: block;
+    font-size: 32px;
+    padding-left: 80%;
+  }
+}
