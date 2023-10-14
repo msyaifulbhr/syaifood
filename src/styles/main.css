@@ -252,6 +252,7 @@ footer span a {
     display: block;
     font-size: 32px;
     padding-left: 80%;
+    text-decoration: none;
   }
 
   .restaurants {
