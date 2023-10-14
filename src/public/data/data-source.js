@@ -1,4 +1,19 @@
 const displayRestaurants = (data) => {
+
+    function ratingStars(rating) {
+        const filledStar = '★';
+        const emptyStar = '☆';
+        const maxStars = 5;
+      
+        const filledStarsCount = Math.round(rating);
+        const emptyStarsCount = maxStars - filledStarsCount;
+      
+        const filledStars = filledStar.repeat(filledStarsCount);
+        const emptyStars = emptyStar.repeat(emptyStarsCount);
+      
+        return filledStars + emptyStars;
+      }
+
     const restaurantContainer = document.querySelector('.restaurants');
 
     const sortedRestaurants = data.restaurants.sort((a, b) => b.rating - a.rating);
@@ -31,7 +46,7 @@ const displayRestaurants = (data) => {
         const ratingElement = document.createElement('p');
         ratingElement.className = "rating";
         ratingElement.ariaLabel = "Rating";
-        ratingElement.innerText = `Rating: ${restaurant.rating}`;
+        ratingElement.innerText = `${ratingStars(restaurant.rating)} ${restaurant.rating}`;
 
         const descriptionElement = document.createElement('p');
         descriptionElement.className = "description";
